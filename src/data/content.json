@@ -1,0 +1,684 @@
+{
+  "product": {
+    "name": "AI Fluency Navigator",
+    "language": "English",
+    "version": "Build Week MVP",
+    "questionCount": 10,
+    "estimatedTime": "3 minutes",
+    "privacyNote": "Your answers stay in your browser."
+  },
+  "components": [
+    {
+      "id": "goal_context",
+      "name": "Goal & Context",
+      "ukrainianWorkingName": "Постановка задачі та контекст",
+      "measures": "How well the user defines the desired result, provides relevant context, states constraints, and asks AI to clarify missing information."
+    },
+    {
+      "id": "iteration_collaboration",
+      "name": "Iteration & Collaboration",
+      "ukrainianWorkingName": "Ітерація та співпраця",
+      "measures": "How effectively the user improves an initial AI response through feedback, added context, comparison, development, or reframing."
+    },
+    {
+      "id": "judgment_verification",
+      "name": "Judgment & Verification",
+      "ukrainianWorkingName": "Оцінювання та перевірка",
+      "measures": "How well the user evaluates AI information, matches verification to risk, and chooses appropriate sources or professionals."
+    },
+    {
+      "id": "workflow_reuse",
+      "name": "Workflow & Reuse",
+      "ukrainianWorkingName": "Повторювані процеси та повторне використання",
+      "measures": "How well the user preserves successful AI work and turns it into reusable templates or repeatable processes."
+    },
+    {
+      "id": "tools_steps",
+      "name": "Tools & Steps",
+      "ukrainianWorkingName": "Інструменти та етапи роботи",
+      "measures": "How well the user chooses suitable AI capabilities, connects task stages, and reviews important outputs."
+    }
+  ],
+  "questions": [
+    {
+      "id": "goal_context_q1",
+      "componentId": "goal_context",
+      "displayOrder": 1,
+      "type": "General behavior",
+      "text": "When you ask AI to help you choose a product, what do you usually include in your first message?",
+      "options": [
+        {
+          "id": "goal_context_q1_a",
+          "text": "I describe what I need and add the most important details that come to mind.",
+          "score": 2,
+          "behavior": "Provides some useful context informally, but may miss important criteria or limitations."
+        },
+        {
+          "id": "goal_context_q1_b",
+          "text": "I name the product and ask AI to recommend a good option.",
+          "score": 1,
+          "behavior": "Gives only the basic task and expects AI to infer missing context."
+        },
+        {
+          "id": "goal_context_q1_c",
+          "text": "I explain my needs, budget, preferences, and any important limitations.",
+          "score": 3,
+          "behavior": "Provides relevant context and practical constraints before asking for a recommendation."
+        },
+        {
+          "id": "goal_context_q1_d",
+          "text": "I describe the result I want and ask AI what else it needs to know before recommending anything.",
+          "score": 4,
+          "behavior": "Invites AI to identify missing information before proceeding."
+        },
+        {
+          "id": "goal_context_q1_e",
+          "text": "I provide clear criteria and ask AI to compare several suitable options.",
+          "score": 4,
+          "behavior": "Defines the decision process and asks for a structured comparison."
+        }
+      ]
+    },
+    {
+      "id": "goal_context_q2",
+      "componentId": "goal_context",
+      "displayOrder": 2,
+      "type": "Situational behavior",
+      "text": "You want AI to help you choose a laundry detergent, but you are not sure which product characteristics matter. What would you most likely do first?",
+      "options": [
+        {
+          "id": "goal_context_q2_a",
+          "text": "Describe what I usually wash and mention the preferences that seem important to me.",
+          "score": 3,
+          "behavior": "Provides relevant context based on current understanding."
+        },
+        {
+          "id": "goal_context_q2_b",
+          "text": "Ask AI to recommend a reliable detergent and then decide whether the answer fits my needs.",
+          "score": 1,
+          "behavior": "Delegates recommendation before providing context."
+        },
+        {
+          "id": "goal_context_q2_c",
+          "text": "Ask AI which details it needs from me before it can make a useful recommendation.",
+          "score": 4,
+          "behavior": "Uses AI to identify missing information."
+        },
+        {
+          "id": "goal_context_q2_d",
+          "text": "Explain my situation and ask AI to compare several options available within my budget.",
+          "score": 4,
+          "behavior": "Combines context, constraint, and desired output format."
+        },
+        {
+          "id": "goal_context_q2_e",
+          "text": "Start with a simple request, then add more details if the first recommendation is too general.",
+          "score": 2,
+          "behavior": "Improves the task reactively through follow-up messages."
+        }
+      ]
+    },
+    {
+      "id": "iteration_collaboration_q1",
+      "componentId": "iteration_collaboration",
+      "displayOrder": 3,
+      "type": "General behavior",
+      "text": "When AI gives you an answer that is partly useful but does not fully meet your needs, what do you usually do next?",
+      "options": [
+        {
+          "id": "iteration_collaboration_q1_a",
+          "text": "I use the useful parts and finish the task myself.",
+          "score": 1,
+          "behavior": "Judges usefulness but ends AI collaboration early."
+        },
+        {
+          "id": "iteration_collaboration_q1_b",
+          "text": "I ask AI to try again, usually with slightly different wording.",
+          "score": 2,
+          "behavior": "Iterates without specific guidance."
+        },
+        {
+          "id": "iteration_collaboration_q1_c",
+          "text": "I explain which parts work, which do not, and what should change.",
+          "score": 4,
+          "behavior": "Provides specific, actionable feedback."
+        },
+        {
+          "id": "iteration_collaboration_q1_d",
+          "text": "I add missing information and continue improving the result through follow-up messages.",
+          "score": 3,
+          "behavior": "Uses progressive context to refine the result."
+        },
+        {
+          "id": "iteration_collaboration_q1_e",
+          "text": "I ask for a few different approaches and compare them before choosing how to continue.",
+          "score": 4,
+          "behavior": "Explores alternatives and retains decision responsibility."
+        }
+      ]
+    },
+    {
+      "id": "iteration_collaboration_q2",
+      "componentId": "iteration_collaboration",
+      "displayOrder": 4,
+      "type": "Situational behavior",
+      "text": "AI suggests several gifts for someone close to you, but none of them feels quite right. What would you most likely do next?",
+      "options": [
+        {
+          "id": "iteration_collaboration_q2_a",
+          "text": "Choose the closest option and adapt the idea myself.",
+          "score": 1,
+          "behavior": "Evaluates suggestions but ends the collaboration."
+        },
+        {
+          "id": "iteration_collaboration_q2_b",
+          "text": "Ask AI to suggest more gifts until something suitable appears.",
+          "score": 2,
+          "behavior": "Requests more options without improving direction."
+        },
+        {
+          "id": "iteration_collaboration_q2_c",
+          "text": "Explain why the suggestions do not fit and add a few details about the person.",
+          "score": 3,
+          "behavior": "Adds useful feedback and context."
+        },
+        {
+          "id": "iteration_collaboration_q2_d",
+          "text": "Tell AI which idea came closest and ask it to develop several variations around it.",
+          "score": 4,
+          "behavior": "Develops the strongest part of the previous response."
+        },
+        {
+          "id": "iteration_collaboration_q2_e",
+          "text": "Change the approach and ask for ideas based on the experience or feeling I want to create.",
+          "score": 4,
+          "behavior": "Reframes the task around a deeper goal."
+        }
+      ]
+    },
+    {
+      "id": "judgment_verification_q1",
+      "componentId": "judgment_verification",
+      "displayOrder": 5,
+      "type": "General behavior",
+      "text": "When AI gives you factual information that could affect a decision, what do you usually do?",
+      "options": [
+        {
+          "id": "judgment_verification_q1_a",
+          "text": "I use the answer if it sounds clear and convincing.",
+          "score": 1,
+          "behavior": "Relies mainly on confidence and presentation."
+        },
+        {
+          "id": "judgment_verification_q1_b",
+          "text": "I ask AI to confirm the information and point out anything that may be uncertain.",
+          "score": 2,
+          "behavior": "Recognizes uncertainty but uses the same system to verify itself."
+        },
+        {
+          "id": "judgment_verification_q1_c",
+          "text": "I compare the answer with another AI tool or a general web search.",
+          "score": 3,
+          "behavior": "Seeks external comparison, though source quality may vary."
+        },
+        {
+          "id": "judgment_verification_q1_d",
+          "text": "I check the key claims using reliable sources related to the topic.",
+          "score": 4,
+          "behavior": "Verifies important claims using relevant sources."
+        },
+        {
+          "id": "judgment_verification_q1_e",
+          "text": "For low-risk tasks I review the answer myself; for health, legal, financial, or other important decisions I check official sources or a qualified professional.",
+          "score": 4,
+          "behavior": "Uses risk-based verification and professional boundaries."
+        }
+      ]
+    },
+    {
+      "id": "judgment_verification_q2",
+      "componentId": "judgment_verification",
+      "displayOrder": 6,
+      "type": "Situational behavior",
+      "text": "AI tells you that you can return an online purchase within a certain period, and you plan to rely on this information. What would you most likely do next?",
+      "options": [
+        {
+          "id": "judgment_verification_q2_a",
+          "text": "Follow the answer because online return rules are usually similar.",
+          "score": 1,
+          "behavior": "Relies on a general assumption without checking."
+        },
+        {
+          "id": "judgment_verification_q2_b",
+          "text": "Ask AI to confirm the rule and explain whether there may be exceptions.",
+          "score": 2,
+          "behavior": "Seeks clarification but not independent verification."
+        },
+        {
+          "id": "judgment_verification_q2_c",
+          "text": "Search online and compare a few pages that mention the return period.",
+          "score": 3,
+          "behavior": "Checks multiple sources, though they may not directly apply."
+        },
+        {
+          "id": "judgment_verification_q2_d",
+          "text": "Check the store’s official return policy before making the decision.",
+          "score": 4,
+          "behavior": "Uses the most directly relevant official source."
+        },
+        {
+          "id": "judgment_verification_q2_e",
+          "text": "Check the store’s policy and, if anything is unclear, look at the consumer rules that apply where I live.",
+          "score": 4,
+          "behavior": "Adds another authoritative source only when needed."
+        }
+      ]
+    },
+    {
+      "id": "workflow_reuse_q1",
+      "componentId": "workflow_reuse",
+      "displayOrder": 7,
+      "type": "General behavior",
+      "text": "When you use AI for a task you expect to repeat, what do you usually do?",
+      "options": [
+        {
+          "id": "workflow_reuse_q1_a",
+          "text": "I ask again when the task comes up and explain the situation from the beginning.",
+          "score": 1,
+          "behavior": "Repeats similar tasks without preserving what worked."
+        },
+        {
+          "id": "workflow_reuse_q1_b",
+          "text": "I return to an earlier chat and use it as a reminder of what worked.",
+          "score": 2,
+          "behavior": "Reuses previous context informally."
+        },
+        {
+          "id": "workflow_reuse_q1_c",
+          "text": "I save a useful prompt or answer and adapt it for the next similar task.",
+          "score": 3,
+          "behavior": "Creates a basic reusable asset."
+        },
+        {
+          "id": "workflow_reuse_q1_d",
+          "text": "I create a simple template with parts that stay the same and details I can replace.",
+          "score": 4,
+          "behavior": "Separates stable instructions from changing details."
+        },
+        {
+          "id": "workflow_reuse_q1_e",
+          "text": "I keep a repeatable sequence of steps and improve it when I notice a better way.",
+          "score": 4,
+          "behavior": "Uses and improves a repeatable process."
+        }
+      ]
+    },
+    {
+      "id": "workflow_reuse_q2",
+      "componentId": "workflow_reuse",
+      "displayOrder": 8,
+      "type": "Situational behavior",
+      "text": "You use AI for a recurring weekly task, such as planning meals and creating a shopping list. The result works well, and you expect to do this again. What would you most likely do?",
+      "options": [
+        {
+          "id": "workflow_reuse_q2_a",
+          "text": "Ask AI to do the task again next week and explain my needs from the beginning.",
+          "score": 1,
+          "behavior": "Repeats the task without preserving the method."
+        },
+        {
+          "id": "workflow_reuse_q2_b",
+          "text": "Continue in the same chat and refer to the previous result.",
+          "score": 2,
+          "behavior": "Uses existing context but remains tied to one chat."
+        },
+        {
+          "id": "workflow_reuse_q2_c",
+          "text": "Save the request that worked and replace the changing details next time.",
+          "score": 3,
+          "behavior": "Reuses a successful request with updated inputs."
+        },
+        {
+          "id": "workflow_reuse_q2_d",
+          "text": "Ask AI to turn the successful request into a reusable template.",
+          "score": 4,
+          "behavior": "Converts one-time success into a reusable tool."
+        },
+        {
+          "id": "workflow_reuse_q2_e",
+          "text": "Use the same basic steps each week and adjust the template when something does not work.",
+          "score": 4,
+          "behavior": "Uses and improves a repeatable process."
+        }
+      ]
+    },
+    {
+      "id": "tools_steps_q1",
+      "componentId": "tools_steps",
+      "displayOrder": 9,
+      "type": "General behavior",
+      "text": "When a task involves more than a simple question, how do you usually decide how to use AI?",
+      "options": [
+        {
+          "id": "tools_steps_q1_a",
+          "text": "I describe the whole task in the chat and see what AI can do with it.",
+          "score": 1,
+          "behavior": "Uses a general text request and relies on AI to determine the method."
+        },
+        {
+          "id": "tools_steps_q1_b",
+          "text": "I break the task into a few messages and complete each part in the same chat.",
+          "score": 2,
+          "behavior": "Uses stages but mostly one mode of interaction."
+        },
+        {
+          "id": "tools_steps_q1_c",
+          "text": "I use relevant features, such as uploading a file or asking for current information, when the task requires them.",
+          "score": 3,
+          "behavior": "Selects capabilities according to task needs."
+        },
+        {
+          "id": "tools_steps_q1_d",
+          "text": "I choose a suitable way to handle each part of the task and move the useful results into the next step.",
+          "score": 4,
+          "behavior": "Connects task parts into a coherent sequence."
+        },
+        {
+          "id": "tools_steps_q1_e",
+          "text": "I plan the main steps, use different tools only where they help, and review important results before continuing.",
+          "score": 4,
+          "behavior": "Combines planning, appropriate tool use, and human review."
+        }
+      ]
+    },
+    {
+      "id": "tools_steps_q2",
+      "componentId": "tools_steps",
+      "displayOrder": 10,
+      "type": "Situational behavior",
+      "text": "You receive an important message with an attached document. Some details may need current information, and you need to understand what to do and prepare a reply. What would you most likely do?",
+      "options": [
+        {
+          "id": "tools_steps_q2_a",
+          "text": "Describe the situation in the chat and copy the parts that seem most important.",
+          "score": 1,
+          "behavior": "Manually filters the source before AI sees it."
+        },
+        {
+          "id": "tools_steps_q2_b",
+          "text": "Upload the document, ask AI to summarize it, and handle the remaining steps myself.",
+          "score": 2,
+          "behavior": "Uses a file for one stage only."
+        },
+        {
+          "id": "tools_steps_q2_c",
+          "text": "Upload the materials and ask AI to explain them and draft a reply in the same chat.",
+          "score": 3,
+          "behavior": "Combines material analysis with output creation."
+        },
+        {
+          "id": "tools_steps_q2_d",
+          "text": "Use the document for the main facts, check current information where needed, and then prepare the reply.",
+          "score": 4,
+          "behavior": "Distinguishes source facts from information that may need updating."
+        },
+        {
+          "id": "tools_steps_q2_e",
+          "text": "Handle each part separately when needed, then bring the results together and check the final reply.",
+          "score": 4,
+          "behavior": "Coordinates stages and performs final review."
+        }
+      ]
+    }
+  ],
+  "levels": [
+    {
+      "id": "curious_beginner",
+      "name": "Curious Beginner",
+      "minScore": 2,
+      "maxScore": 2,
+      "visualLevel": 1
+    },
+    {
+      "id": "practical_user",
+      "name": "Practical User",
+      "minScore": 3,
+      "maxScore": 4,
+      "visualLevel": 2
+    },
+    {
+      "id": "workflow_builder",
+      "name": "Workflow Builder",
+      "minScore": 5,
+      "maxScore": 6,
+      "visualLevel": 3
+    },
+    {
+      "id": "ai_collaborator",
+      "name": "AI Collaborator",
+      "minScore": 7,
+      "maxScore": 7,
+      "visualLevel": 4
+    },
+    {
+      "id": "ai_systems_thinker",
+      "name": "AI Systems Thinker",
+      "minScore": 8,
+      "maxScore": 8,
+      "visualLevel": 5
+    }
+  ],
+  "componentContent": {
+    "goal_context": {
+      "levelDescriptions": {
+        "curious_beginner": "You often begin with a broad request and let AI infer the goal, context, and limits. This can work for simple tasks, but the result may be generic or miss what matters most.",
+        "practical_user": "You usually add some useful details, but important criteria or constraints may appear only after the first answer.",
+        "workflow_builder": "You describe your needs, relevant context, practical constraints, and the kind of result you want.",
+        "ai_collaborator": "You frame the desired outcome clearly and invite AI to identify missing information before moving forward.",
+        "ai_systems_thinker": "You define the outcome, context, constraints, success criteria, and useful format while keeping the request proportional to the task."
+      },
+      "traps": {
+        "curious_beginner": "The vague request",
+        "practical_user": "Important details arrive too late",
+        "workflow_builder": "A long prompt without a clear decision",
+        "ai_collaborator": "Over-specifying before learning what matters",
+        "ai_systems_thinker": "Turning every task into a full specification"
+      },
+      "strengthPhrase": "You give AI enough direction to produce relevant and practical results.",
+      "growthPhrase": "Clarifying the outcome and constraints earlier will improve almost every other part of your AI use.",
+      "exercise": {
+        "title": "Frame one real task before solving it",
+        "duration": "10–15 minutes",
+        "instructions": [
+          "Choose one real task you plan to do with AI.",
+          "Write the result you want in one sentence.",
+          "Add the context and constraints that could change the answer.",
+          "Name the format you need.",
+          "Ask AI what important information is still missing before it starts."
+        ]
+      },
+      "basePrompt": "Help me frame this task before solving it. First, restate the outcome I am trying to achieve. Then identify the relevant context, constraints, missing information, and the most useful output format. Ask only the questions that would materially improve the result. Do not solve the task until the framing is clear."
+    },
+    "iteration_collaboration": {
+      "levelDescriptions": {
+        "curious_beginner": "You often accept, adapt, or abandon the first answer instead of using it as a starting point for improvement.",
+        "practical_user": "You ask AI to try again or give more options, but your feedback may remain general.",
+        "workflow_builder": "You explain what works, what does not, and add missing information to improve the next version.",
+        "ai_collaborator": "You compare approaches, preserve the strongest parts, and guide AI toward a better result through specific feedback.",
+        "ai_systems_thinker": "You use deliberate iteration with checkpoints, alternatives, and a clear stopping rule so the process improves quality without becoming endless."
+      },
+      "traps": {
+        "curious_beginner": "One-shot AI use",
+        "practical_user": "The vague “try again” loop",
+        "workflow_builder": "Polishing without a clear goal",
+        "ai_collaborator": "Exploring too many alternatives",
+        "ai_systems_thinker": "Iteration without a stopping rule"
+      },
+      "strengthPhrase": "You treat the first AI answer as a working draft and improve it through useful feedback.",
+      "growthPhrase": "More specific follow-ups will help you turn “almost right” answers into results you can actually use.",
+      "exercise": {
+        "title": "Improve one useful but imperfect answer",
+        "duration": "10–15 minutes",
+        "instructions": [
+          "Choose one AI answer that was helpful but not quite right.",
+          "List what should stay.",
+          "List what should change.",
+          "Add any missing information.",
+          "Ask for one improved version and compare it with the original."
+        ]
+      },
+      "basePrompt": "Improve the previous result with me rather than starting over. First, identify what is already useful. Then ask me what should change, what information is missing, and what the next version must do better. Preserve the strong parts, propose one improved version, and briefly explain the main changes."
+    },
+    "judgment_verification": {
+      "levelDescriptions": {
+        "curious_beginner": "You may rely on an answer when it sounds clear and confident, even when the decision depends on factual accuracy.",
+        "practical_user": "You recognize uncertainty and may ask AI to confirm itself, but independent verification is still limited.",
+        "workflow_builder": "You compare important information with other sources, although the quality and relevance of those sources may vary.",
+        "ai_collaborator": "You check key claims using reliable sources that fit the topic and match verification effort to the risk of the decision.",
+        "ai_systems_thinker": "You distinguish facts, assumptions, recommendations, and uncertainty, then plan verification proportionally using authoritative sources or professionals when needed."
+      },
+      "traps": {
+        "curious_beginner": "Confidence sounds like evidence",
+        "practical_user": "AI checking itself",
+        "workflow_builder": "Source quantity over source quality",
+        "ai_collaborator": "Checking everything with the same intensity",
+        "ai_systems_thinker": "Research paralysis"
+      },
+      "strengthPhrase": "You verify important claims in proportion to the risk of the decision.",
+      "growthPhrase": "Choosing a more relevant source for the most important claim will make your decisions more reliable.",
+      "exercise": {
+        "title": "Verify one decision-relevant claim",
+        "duration": "10–15 minutes",
+        "instructions": [
+          "Choose one factual AI claim that could affect a real decision.",
+          "Rate the consequence of being wrong as low, medium, or high.",
+          "Identify the most directly relevant source.",
+          "Check the claim.",
+          "Write what changed, stayed uncertain, or still needs professional advice."
+        ]
+      },
+      "basePrompt": "Help me verify this answer in proportion to the risk. Separate factual claims, assumptions, recommendations, and uncertainty. Identify which claims matter most to my decision, suggest the most relevant source type for each, and tell me what should be checked with an official source or qualified professional."
+    },
+    "workflow_reuse": {
+      "levelDescriptions": {
+        "curious_beginner": "You usually start similar AI tasks from the beginning and explain the same context again.",
+        "practical_user": "You return to previous chats or results as reminders, but the process depends on finding and interpreting old conversations.",
+        "workflow_builder": "You save useful prompts or answers and adapt them for similar tasks.",
+        "ai_collaborator": "You create reusable templates with stable instructions, replaceable inputs, and a clear output structure.",
+        "ai_systems_thinker": "You maintain a repeatable process, review what works, improve it over time, and remove steps that no longer add value."
+      },
+      "traps": {
+        "curious_beginner": "Starting from zero",
+        "practical_user": "Depending on old chats",
+        "workflow_builder": "Saving prompts without structure",
+        "ai_collaborator": "A template that no longer fits",
+        "ai_systems_thinker": "Overengineering the workflow"
+      },
+      "strengthPhrase": "You preserve successful AI work and can turn it into a repeatable process.",
+      "growthPhrase": "Turning one successful task into a reusable template can save time immediately.",
+      "exercise": {
+        "title": "Turn one recurring task into a template",
+        "duration": "10–15 minutes",
+        "instructions": [
+          "Choose one AI task you expect to repeat.",
+          "Separate what stays the same from what changes each time.",
+          "Define the inputs, steps, output format, and final review.",
+          "Save the result as a reusable template.",
+          "Use it once with different inputs."
+        ]
+      },
+      "basePrompt": "Turn this successful AI task into a reusable template. Separate the stable instructions from the details that will change each time. Structure it as: purpose, inputs, steps, output format, quality checks, and replaceable fields. Keep it simple enough to reuse and improve later."
+    },
+    "tools_steps": {
+      "levelDescriptions": {
+        "curious_beginner": "You mainly treat AI as a text box and try to solve the whole task through one general request.",
+        "practical_user": "You can split a task into several messages and may use one additional capability, such as uploading a file.",
+        "workflow_builder": "You choose relevant capabilities, such as files or current information, and connect several stages into a useful result.",
+        "ai_collaborator": "You deliberately choose how each part of the task should be handled and connect analysis, clarification, current information, and output creation.",
+        "ai_systems_thinker": "You see the task as a whole, plan the main stages, use only the capabilities that add value, carry results between steps, and review important outputs."
+      },
+      "traps": {
+        "curious_beginner": "Using only the text box",
+        "practical_user": "One useful tool, but isolated from the rest of the task",
+        "workflow_builder": "Using more tools than the task needs",
+        "ai_collaborator": "Treating connected stages as separate pieces",
+        "ai_systems_thinker": "Overengineering"
+      },
+      "strengthPhrase": "You choose useful AI capabilities according to the task and connect them into a practical process.",
+      "growthPhrase": "Matching each part of the task to the simplest useful capability will make complex work easier.",
+      "exercise": {
+        "title": "Coordinate one multi-part task",
+        "duration": "10–15 minutes",
+        "instructions": [
+          "Choose a task that includes more than one type of material or action.",
+          "Provide the original material.",
+          "Separate what can be understood from it, what may need current information, and what requires your decision.",
+          "Create the final output.",
+          "Review the result before acting."
+        ]
+      },
+      "basePrompt": "Help me handle this task in clear stages. First, identify the materials and information already available. Then separate what can be understood from the provided content, what may need current information, and what requires my decision. Suggest the simplest useful sequence of steps. Use only the tools or formats that genuinely help, and pause for my review before the final result."
+    }
+  },
+  "growthLevelIntros": {
+    "curious_beginner": "Start with one small change that makes this habit visible in your next task.",
+    "practical_user": "Your next step is to make this useful habit more deliberate and consistent.",
+    "workflow_builder": "You already have a practical foundation; now turn it into a reliable method.",
+    "ai_collaborator": "You are close to systematic use; focus on refinement and consistency.",
+    "ai_systems_thinker": "Your next improvement is simplification: keep only the steps that consistently add value."
+  },
+  "resultLogic": {
+    "componentOrder": [
+      "goal_context",
+      "iteration_collaboration",
+      "judgment_verification",
+      "workflow_reuse",
+      "tools_steps"
+    ],
+    "strongestTieOrder": [
+      "goal_context",
+      "iteration_collaboration",
+      "judgment_verification",
+      "workflow_reuse",
+      "tools_steps"
+    ],
+    "growthTiePriority": [
+      "goal_context",
+      "judgment_verification",
+      "iteration_collaboration",
+      "workflow_reuse",
+      "tools_steps"
+    ],
+    "balancedProfiles": {
+      "low": {
+        "scoreRange": [
+          2,
+          4
+        ],
+        "growthArea": "goal_context",
+        "summary": "Your AI habits are developing evenly. The best place to start is Goal & Context, because clearer tasks improve almost every other part of AI use."
+      },
+      "medium": {
+        "scoreRange": [
+          5,
+          6
+        ],
+        "growthArea": "workflow_reuse",
+        "summary": "You have a balanced practical foundation. Your next step is to make one successful AI task repeatable instead of trying to improve everything at once."
+      },
+      "high": {
+        "scoreRange": [
+          7,
+          8
+        ],
+        "growthArea": "tools_steps",
+        "summary": "You already use AI in a balanced and deliberate way. Your next step is refinement: simplify your processes and keep only the steps that consistently add value."
+      }
+    },
+    "summaryTemplates": {
+      "balanced": "You have a fairly balanced AI fluency profile. Your strongest edge is {strongest}, and the most useful next step is {growth}.",
+      "clearGap": "You already show a clear strength in {strongest}, while {growth} is the area most likely to unlock more consistent results.",
+      "standard": "You are building a solid practical foundation. {strongest} is currently your strongest capability, and {growth} is your highest-impact growth area."
+    }
+  }
+}
