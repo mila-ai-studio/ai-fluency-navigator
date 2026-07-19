@@ -5,6 +5,7 @@ import { PromptCard } from "../components/PromptCard";
 import { diagnosticContent } from "../data/diagnostic";
 import { calculateComponentScores, buildComponentProfiles, getLevelForScore } from "../logic/scoring";
 import { selectProfile } from "../logic/resultSelection";
+import { buildNextStepPackage } from "../logic/nextStepPackage";
 import type { DiagnosticSession } from "../types/diagnostic";
 
 export function ResultPage({ session, onRestart }: { session: DiagnosticSession; onRestart: () => void }) {
@@ -22,6 +23,15 @@ export function ResultPage({ session, onRestart }: { session: DiagnosticSession;
     const component = diagnosticContent.components.find((item) => item.id === id);
     if (!component) throw new Error(`Missing component: ${id}`);
     return { component, content: diagnosticContent.componentContent[id] };
+  });
+  const nextStepPackage = buildNextStepPackage({
+    strongestCapabilities: strongestComponents.map(({ component }) => component.name),
+    growthArea: growthComponent.name,
+    typicalTrap: growthContent.traps[growthLevel.id],
+    exerciseTitle: growthContent.exercise.title,
+    estimatedTime: growthContent.exercise.duration,
+    exerciseSteps: growthContent.exercise.instructions,
+    aiInstruction: growthContent.basePrompt,
   });
 
   return (
@@ -120,7 +130,7 @@ export function ResultPage({ session, onRestart }: { session: DiagnosticSession;
       <div className="result-tail">
         <PromptCard
           intro={diagnosticContent.growthLevelIntros[growthLevel.id]}
-          prompt={growthContent.basePrompt}
+          packageText={nextStepPackage}
         />
 
         <section className="result-restart">

@@ -497,7 +497,7 @@
           "Ask AI what important information is still missing before it starts."
         ]
       },
-      "basePrompt": "Help me frame this task before solving it. First, restate the outcome I am trying to achieve. Then identify the relevant context, constraints, missing information, and the most useful output format. Ask only the questions that would materially improve the result. Do not solve the task until the framing is clear."
+      "basePrompt": "I want to frame a real task before asking AI to solve it. First ask me to describe the task, the outcome I want, the relevant context, any constraints, and the output format I need. Then restate the outcome and identify any missing information. Ask only the questions that would materially improve the result. Do not solve the task until the framing is clear."
     },
     "iteration_collaboration": {
       "levelDescriptions": {
@@ -527,7 +527,7 @@
           "Ask for one improved version and compare it with the original."
         ]
       },
-      "basePrompt": "Improve the previous result with me rather than starting over. First, identify what is already useful. Then ask me what should change, what information is missing, and what the next version must do better. Preserve the strong parts, propose one improved version, and briefly explain the main changes."
+      "basePrompt": "I want to improve an existing AI-generated result rather than start over. First ask me to paste the result I want to improve and describe what it needs to accomplish. Then identify what is already useful and ask what should change, what information is missing, and what the next version must do better. Preserve the strong parts, propose one improved version, and briefly explain the main changes."
     },
     "judgment_verification": {
       "levelDescriptions": {
@@ -557,7 +557,7 @@
           "Write what changed, stayed uncertain, or still needs professional advice."
         ]
       },
-      "basePrompt": "Help me verify this answer in proportion to the risk. Separate factual claims, assumptions, recommendations, and uncertainty. Identify which claims matter most to my decision, suggest the most relevant source type for each, and tell me what should be checked with an official source or qualified professional."
+      "basePrompt": "I want to verify an AI-generated answer or claim before using it in a decision. First ask me to paste the answer or claim and describe the decision it could affect. Then separate factual claims, assumptions, recommendations, and uncertainty. Identify which claims matter most to the decision, suggest the most relevant source type for each, and explain what should be checked with an official source or qualified professional."
     },
     "workflow_reuse": {
       "levelDescriptions": {
@@ -587,7 +587,7 @@
           "Use it once with different inputs."
         ]
       },
-      "basePrompt": "Turn this successful AI task into a reusable template. Separate the stable instructions from the details that will change each time. Structure it as: purpose, inputs, steps, output format, quality checks, and replaceable fields. Keep it simple enough to reuse and improve later."
+      "basePrompt": "I want to turn a successful recurring AI task into a reusable template. First ask me to describe the recurring task and paste or summarize the prompt, process, or result that currently works. Then separate the stable instructions from the details that will change each time. Structure the template as: purpose, inputs, steps, output format, quality checks, and replaceable fields. Keep it simple enough to reuse and improve later."
     },
     "tools_steps": {
       "levelDescriptions": {
@@ -617,7 +617,7 @@
           "Review the result before acting."
         ]
       },
-      "basePrompt": "Help me handle this task in clear stages. First, identify the materials and information already available. Then separate what can be understood from the provided content, what may need current information, and what requires my decision. Suggest the simplest useful sequence of steps. Use only the tools or formats that genuinely help, and pause for my review before the final result."
+      "basePrompt": "I want to handle a multi-part task in clear stages. First ask me to describe the task, the final output I need, and any materials or information I can provide. Ask me to paste or attach the relevant materials before analyzing them. Then separate what can be understood from those materials, what may need current information, and what requires my decision. Suggest the simplest useful sequence of steps, use only the tools or formats that genuinely help, and pause for my review before creating the final result."
     }
   },
   "growthLevelIntros": {

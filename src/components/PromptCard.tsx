@@ -3,12 +3,12 @@ import { useEffect, useRef, useState } from "react";
 
 interface PromptCardProps {
   intro: string;
-  prompt: string;
+  packageText: string;
 }
 
 type CopyState = "idle" | "copied" | "failed";
 
-export function PromptCard({ intro, prompt }: PromptCardProps) {
+export function PromptCard({ intro, packageText }: PromptCardProps) {
   const [copyState, setCopyState] = useState<CopyState>("idle");
   const promptRef = useRef<HTMLTextAreaElement>(null);
 
@@ -21,7 +21,7 @@ export function PromptCard({ intro, prompt }: PromptCardProps) {
   async function copyPrompt() {
     try {
       if (!navigator.clipboard?.writeText) throw new Error("Clipboard unavailable");
-      await navigator.clipboard.writeText(prompt);
+      await navigator.clipboard.writeText(packageText);
       setCopyState("copied");
     } catch {
       promptRef.current?.focus();
@@ -45,18 +45,19 @@ export function PromptCard({ intro, prompt }: PromptCardProps) {
           ref={promptRef}
           className="prompt-card__text"
           readOnly
-          value={prompt}
-          aria-label="Next-level prompt text"
+          value={packageText}
+          aria-label="Personalized next-step package"
           rows={7}
         />
         <button className="copy-button" type="button" onClick={copyPrompt}>
           {copyState === "copied" ? <Check size={17} /> : <Copy size={17} />}
-          {copyState === "copied" ? "Copied" : "Copy prompt"}
+          {copyState === "copied" ? "Copied" : "Copy my next step"}
         </button>
       </div>
+      <p className="copy-helper">Paste it into any AI chat. Everything needed is included.</p>
       <p className="sr-only" aria-live="polite">
         {copyState === "copied"
-          ? "Prompt copied to clipboard."
+          ? "Next-step package copied to clipboard."
           : copyState === "failed"
             ? "Copy failed. Select the prompt manually."
             : ""}

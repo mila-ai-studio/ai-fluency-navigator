@@ -947,6 +947,14 @@ p {
   line-height: 1.72;
 }
 
+.copy-helper {
+  margin: 12px 0 0 52px;
+  color: #c6cbda;
+  font-size: 0.74rem;
+  line-height: 1.45;
+  text-align: right;
+}
+
 .copy-button {
   position: absolute;
   right: 24px;
@@ -1100,6 +1108,7 @@ p {
   .prompt-card { margin-left: 0; }
   .prompt-section__intro { margin-top: -10px; }
   .prompt-card__text { min-height: 300px; padding: 22px 20px 82px; font-size: 0.82rem; }
+  .copy-helper { margin-left: 0; }
   .copy-button { right: 18px; bottom: 18px; }
   .copy-error { margin-left: 8px; }
 
